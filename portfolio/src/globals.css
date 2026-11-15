@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom design tokens for the INCEPTRIX-inspired portfolio */
+
+/* Color variables */
+:root {
+  --color-midnightNavy: #071426;
+  --color-nearBlack: #05080D;
+  --color-emeraldGreen: #19D18B;
+  --color-electricBlue: #258BFF;
+  --color-white: #FFFFFF;
+  --color-mutedGrey: #A8B4C3;
+  --color-warmYellow: #F4D35E;
+}
+
+/* Dark mode */
+.dark {
+  --color-midnightNavy: #071426;
+  --color-nearBlack: #05080D;
+}
+
+/* Background layers */
+.bg-navy { background-color: var(--color-midnightNavy); }
+.bg-nearBlack { background-color: var(--color-nearBlack); }
+.bg-emerald { background-color: var(--color-emeraldGreen); }
+.bg-blue { background-color: var(--color-electricBlue); }
+.bg-white { background-color: var(--color-white); }
+.bg-muted { background-color: var(--color-mutedGrey); }
+.bg-yellow { background-color: var(--color-warmYellow); }
+
+/* Text colors */
+.text-navy { color: var(--color-midnightNavy); }
+.text-emerald { color: var(--color-emeraldGreen); }
+.text-blue { color: var(--color-electricBlue); }
+.text-white { color: var(--color-white); }
+.text-muted { color: var(--color-mutedGrey); }
+.text-yellow { color: var(--color-warmYellow); }
+
+/* Section and panel styles */
+.section-padding { padding-top: 4rem; padding-bottom: 4rem; }
+.section-padding-small { padding-top: 2rem; padding-bottom: 2rem; }
+
+/* Card styles */
+.card-navy { background: rgba(7, 20, 38, 0.8); border: 1px solid var(--color-mutedGrey); }
+.card-emerald { background: linear-gradient(135deg, rgba(25, 209, 139, 0.1), rgba(25, 209, 139, 0.05)); border: 1px solid rgba(25, 209, 139, 0.3); }
+
+/* Navigation */
+.nav-link { position: relative; }
+.nav-link::after { content: ""; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--color-emeraldGreen); transition: width 0.3s ease; }
+.nav-link:hover::after { width: 100%; }
+
+/* Button styles */
+.btn-primary {
+  background: var(--color-emeraldGreen);
+  color: var(--color-midnightNavy);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+}
+.btn-primary:hover {
+  background: var(--color-electricBlue);
+  color: var(--color-midnightNavy);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(37, 139, 255, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-mutedGrey);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-mutedGrey);
+}
+.btn-secondary:hover {
+  background: var(--color-midnightNavy);
+  color: var(--color-emeraldGreen);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
