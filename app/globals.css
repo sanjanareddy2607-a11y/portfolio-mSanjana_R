@@ -560,3 +560,15 @@
     transform: none;
   }
 }
+
+/* Professional emphasis treatment: keep the serif display face, but drop the
+   decorative italic on accented words so headings read as technical rather than
+   personal or calligraphic. Colour emphasis is preserved. */
+.display em,
+.display .italic,
+.display .accent-italic,
+h1 em,
+h2 em,
+em.accent-italic {
+  font-style: normal !important;
+}

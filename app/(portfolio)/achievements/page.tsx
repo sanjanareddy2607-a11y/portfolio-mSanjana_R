@@ -7,6 +7,10 @@ const tier: Record<string, { label: string; className: string }> = {
   entry: { label: "Participation", className: "border-line text-faint" },
 };
 
+const wins = achievements.filter((item) => item.kind === "win").length;
+const honours = achievements.filter((item) => item.kind === "honour").length;
+const entries = achievements.filter((item) => item.kind === "entry").length;
+
 export default function Achievements() {
   return (
     <PageShell
@@ -22,16 +26,16 @@ export default function Achievements() {
         <div className="space-y-2">
           <p className="label-xs flex items-center gap-2 text-ember">
             <Dot tone="ember" />
-            03 wins recorded
+            {String(wins).padStart(2, "0")} wins recorded
           </p>
-          <p>10 entries total</p>
+          <p>{achievements.length} entries total</p>
         </div>
       }
     >
       <div className="grid gap-5 sm:grid-cols-3">
-        <Metric value="03" label="Winning entries" />
-        <Metric value="01" label="Runner-up" />
-        <Metric value="06" label="Competitions entered" />
+        <Metric value={String(wins).padStart(2, "0")} label="Winning entries" />
+        <Metric value={String(honours).padStart(2, "0")} label="Runner-up" />
+        <Metric value={String(entries).padStart(2, "0")} label="Competitions entered" />
       </div>
 
       <div className="panel brackets relative mt-10 p-5 md:p-7">

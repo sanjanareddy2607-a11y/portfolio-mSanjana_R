@@ -1,0 +1,93 @@
+/**
+ * Shared Clerk component theme, aligned with the portfolio's cosmic design
+ * system (deep teal-black surfaces, aqua accent, monospace labels).
+ */
+export const clerkAppearance = {
+  variables: {
+    colorPrimary: "#20E6D0",
+    colorBackground: "#04151B",
+    colorText: "#E8F4F2",
+    colorTextSecondary: "#9DB4B1",
+    colorInputBackground: "#020B12",
+    colorInputText: "#E8F4F2",
+    colorNeutral: "#E8F4F2",
+    colorDanger: "#F28B82",
+    colorSuccess: "#20E6D0",
+    borderRadius: "2px",
+    fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif",
+    fontFamilyButtons: "var(--font-jetbrains-mono), ui-monospace, monospace",
+    fontSize: "13px",
+  },
+  elements: {
+    rootBox: { width: "100%" },
+    cardBox: { width: "100%", boxShadow: "none" },
+    card: {
+      background: "rgba(4, 21, 27, 0.92)",
+      border: "1px solid rgba(32, 230, 208, 0.18)",
+      boxShadow: "0 24px 80px -40px rgba(0, 0, 0, 0.9)",
+      padding: "28px",
+      backdropFilter: "blur(8px)",
+    },
+    headerTitle: {
+      fontFamily: "var(--font-instrument-serif), Georgia, serif",
+      fontSize: "1.6rem",
+      fontWeight: "400",
+      letterSpacing: "-0.01em",
+      color: "#E8F4F2",
+    },
+    headerSubtitle: { color: "#9DB4B1", fontSize: "12px" },
+    socialButtonsBlockButton: {
+      border: "1px solid rgba(32, 230, 208, 0.22)",
+      background: "rgba(2, 11, 18, 0.6)",
+      color: "#E8F4F2",
+      textTransform: "uppercase",
+      letterSpacing: "0.12em",
+      fontSize: "11px",
+      fontFamily: "var(--font-jetbrains-mono), monospace",
+      padding: "10px",
+    },
+    socialButtonsBlockButtonText: { fontWeight: "500" },
+    dividerLine: { background: "rgba(32, 230, 208, 0.14)" },
+    dividerText: {
+      color: "#6F8986",
+      fontSize: "10px",
+      letterSpacing: "0.18em",
+      textTransform: "uppercase",
+    },
+    formFieldLabel: {
+      color: "#9DB4B1",
+      fontSize: "10px",
+      letterSpacing: "0.16em",
+      textTransform: "uppercase",
+      fontFamily: "var(--font-jetbrains-mono), monospace",
+    },
+    formFieldInput: {
+      background: "#020B12",
+      border: "1px solid rgba(32, 230, 208, 0.16)",
+      color: "#E8F4F2",
+    },
+    formButtonPrimary: {
+      background: "#20E6D0",
+      color: "#020B12",
+      textTransform: "uppercase",
+      letterSpacing: "0.14em",
+      fontSize: "11px",
+      fontWeight: "600",
+      fontFamily: "var(--font-jetbrains-mono), monospace",
+      padding: "12px",
+      boxShadow: "none",
+    },
+    footerActionText: { color: "#6F8986", fontSize: "12px" },
+    footerActionLink: { color: "#20E6D0" },
+    footer: { background: "transparent" },
+    identityPreviewText: { color: "#E8F4F2" },
+    identityPreviewEditButton: { color: "#20E6D0" },
+    otpCodeFieldInput: { background: "#020B12", border: "1px solid rgba(32, 230, 208, 0.2)" },
+    formResendCodeLink: { color: "#20E6D0" },
+    alertText: { fontSize: "12px" },
+    logoBox: { display: "none" },
+    logoImage: { display: "none" },
+  },
+};
+
+export default clerkAppearance;

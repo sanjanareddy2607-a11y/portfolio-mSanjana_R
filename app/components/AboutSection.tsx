@@ -42,7 +42,7 @@ export const AboutSection = () => {
                 <dd className="mt-3 space-y-1.5 text-[13px] leading-relaxed text-mist">
                   <p>B.Tech Computer Science and Engineering — AI &amp; ML</p>
                   <p>Jain (Deemed-to-be) University, Bengaluru</p>
-                  <p className="text-faint">Second Year, 2024–2028</p>
+                  <p className="text-faint">Second year · CGPA 9.3/10</p>
                 </dd>
               </div>
               <div>

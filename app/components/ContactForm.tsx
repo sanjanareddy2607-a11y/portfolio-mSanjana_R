@@ -55,20 +55,23 @@ export const ContactForm = () => {
       if (response.ok && result.success) {
         setStatus("success");
         setStatusMessage(
-          result.persisted
-            ? "Thank you! Your message has been received and saved."
-            : "Thank you! Your message has been received."
+          result.emailNotified
+            ? "Thank you — your message was saved and Sanjana has been notified by email."
+            : "Thank you — your message was saved. Email notification is being configured; expect a reply by email."
         );
         setFormData(emptyForm);
       } else {
         setStatus("error");
-        setStatusMessage(result.error || "Failed to send message. Please try again.");
+        setStatusMessage(
+          result.error ||
+            "Your message was not sent. Please try again, or email sanjanareddy2607@gmail.com directly."
+        );
       }
     } catch (error) {
       console.error("Submission error:", error);
       setStatus("error");
       setStatusMessage(
-        "Network error. Please try emailing me directly at sanjanareddy2607@gmail.com."
+        "Network error — your message was not sent. Please email sanjanareddy2607@gmail.com directly."
       );
     }
   };

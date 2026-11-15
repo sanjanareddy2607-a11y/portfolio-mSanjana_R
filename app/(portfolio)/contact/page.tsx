@@ -6,7 +6,7 @@ const channels = [
   { label: "Email", value: site.email, href: `mailto:${site.email}`, external: false },
   { label: "GitHub", value: site.githubLabel, href: site.github, external: true },
   { label: "Hugging Face", value: site.huggingfaceLabel, href: site.huggingface, external: true },
-  { label: "LinkedIn", value: "linkedin.com/in/sanjanareddy2607", href: site.linkedin, external: true },
+  { label: "LinkedIn", value: "linkedin.com/in/mummaka-sanjana-reddy-794089405", href: site.linkedin, external: true },
 ];
 
 export default function Contact() {

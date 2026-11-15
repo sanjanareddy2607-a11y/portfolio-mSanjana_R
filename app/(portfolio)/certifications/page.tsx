@@ -1,6 +1,9 @@
 import { Dot, PageShell } from "@/components/ui";
 import { certifications } from "@/lib/content";
 
+const completed = certifications.filter((item) => item.status === "completed").length;
+const pending = certifications.filter((item) => item.status === "pending").length;
+
 export default function Certifications() {
   return (
     <PageShell
@@ -11,14 +14,16 @@ export default function Certifications() {
           Credential <span className="ink-accent italic">register.</span>
         </>
       }
-      lead="Completed programmes and certifications relevant to applied AI/ML and cloud practice."
+      lead="Completed programmes, certifications and badges in applied AI/ML, agentic systems and cloud practice. Pending credentials are labelled rather than presented as issued."
       meta={
         <div className="space-y-2">
           <p className="label-xs flex items-center gap-2 text-accent">
             <Dot />
             {certifications.length} credentials
           </p>
-          <p>Issued 2024</p>
+          <p>
+            {completed} issued · {pending} pending
+          </p>
         </div>
       }
     >
@@ -42,19 +47,28 @@ export default function Certifications() {
 
             <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-line/70 pt-4">
               <span className="label-xs text-accent">{item.issuer}</span>
-              <span className="label-xs text-faint">Issued {item.year}</span>
+              <span className="label-xs text-faint">{item.date}</span>
             </div>
 
-            <span className="label-xs mt-4 flex items-center gap-2 text-faint">
-              <Dot tone="mist" />
-              Credential recorded
+            {item.note && (
+              <p className="mt-3 text-[12.5px] leading-relaxed text-mist">{item.note}</p>
+            )}
+
+            <span
+              className={`label-xs mt-4 flex items-center gap-2 ${
+                item.status === "pending" ? "text-ember" : "text-faint"
+              }`}
+            >
+              <Dot tone={item.status === "pending" ? "ember" : "mist"} />
+              {item.status === "pending" ? "Certificate pending issue" : "Credential completed"}
             </span>
           </article>
         ))}
       </div>
 
       <p className="label-xs mt-8 text-faint">
-        Verification links appear here once a public credential URL is available.
+        Verification links appear here once a public credential URL is available. Credential
+        identifiers are published only where the issuer provided one.
       </p>
     </PageShell>
   );

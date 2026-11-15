@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { UserButton } from "@clerk/nextjs";
 import { sections, site } from "@/lib/content";
 
 type IconProps = { className?: string };
@@ -161,6 +162,17 @@ export const Navigation = () => {
               </span>
               Open to AI/ML opportunities
             </span>
+
+            <UserButton
+              showName={false}
+              appearance={{
+                variables: {
+                  colorPrimary: "#20E6D0",
+                  colorBackground: "#04151B",
+                  borderRadius: "2px",
+                },
+              }}
+            />
 
             <a
               href={site.resume}

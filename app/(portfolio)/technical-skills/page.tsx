@@ -17,10 +17,10 @@ export default function TechnicalSkills() {
           Working <span className="ink-accent italic">instrumentation.</span>
         </>
       }
-      lead="Tools and fundamentals in active use. Levels are qualitative — advanced, proficient or familiar — rather than invented percentages."
+      lead="Tools and fundamentals in active use across development, AI/ML, backend engineering, data, cloud platforms, design and professional practice. Levels are qualitative — advanced, proficient or familiar — rather than invented percentages."
       meta={
         <div className="space-y-2">
-          <p className="label-xs text-accent">04 capability groups</p>
+          <p className="label-xs text-accent">{String(skills.length).padStart(2, "0")} capability groups</p>
           <p>Python · PyTorch · FastAPI · Docker · Ollama</p>
         </div>
       }

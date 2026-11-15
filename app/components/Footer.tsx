@@ -11,6 +11,7 @@ const navLinks = [
 ];
 
 const indexLinks = [
+  { href: "/about#education", label: "Education" },
   { href: "/achievements", label: "Achievements" },
   { href: "/certifications", label: "Certifications" },
   { href: "/technical-skills", label: "Technical Skills" },

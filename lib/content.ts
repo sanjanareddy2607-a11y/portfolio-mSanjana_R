@@ -45,11 +45,11 @@ export const site = {
   githubLabel: "github.com/sanjanareddy2607-a11y",
   huggingface: "https://huggingface.co/SanjanaReddy999",
   huggingfaceLabel: "huggingface.co/SanjanaReddy999",
-  linkedin: "https://linkedin.com/in/sanjanareddy2607",
-  resume: "/resume.pdf",
+  linkedin: "https://www.linkedin.com/in/mummaka-sanjana-reddy-794089405",
+  resume: "/api/resume",
   program: "B.Tech Computer Science and Engineering — AI & ML",
   university: "Jain (Deemed-to-be) University, Bengaluru",
-  cohort: "Second Year, 2024–2028",
+  cohort: "Second year",
   intro:
     "I explore the engineering behind intelligent systems, turning technical ideas into practical projects and researching automated solutions for real-world problems.",
   heroIntro:
@@ -69,8 +69,8 @@ export const sections = [
 export const heroFacts = [
   { label: "Program", value: "B.Tech CSE — AI & ML" },
   { label: "Institution", value: "Jain (Deemed-to-be) University" },
-  { label: "Role", value: "Design Co-Lead — Turing Club", accent: true },
-  { label: "Community", value: "GDG JU-FET" },
+  { label: "Role", value: "Graphic Designer — Turing Club", accent: true },
+  { label: "CGPA", value: "9.3 / 10", accent: true },
   { label: "Status", value: "Open to AI/ML opportunities", accent: true },
 ];
 
@@ -414,6 +414,98 @@ export const research = {
   pipeline: ["STEP CAD", "B-rep graph", "GATv2", "Uncertainty rank", "Tool-grouped CNC"],
 };
 
+export const education = {
+  institution: "Jain (Deemed-to-be) University, Bengaluru",
+  degree: "B.Tech Computer Science and Engineering",
+  specialization: "Artificial Intelligence & Machine Learning",
+  cgpa: "9.3",
+  cgpaScale: "/10",
+  status: "Second year",
+  graduation: "Graduation year pending confirmation",
+  coursework: [
+    "Data Structures & Algorithms",
+    "Python",
+    "OOP with Java",
+    "SQL & Databases",
+    "AI & Prompt Engineering",
+    "Data Science Fundamentals",
+    "Unix Shell Scripting",
+    "Git & GitHub",
+    "Trees & Graphs",
+    "Operating Systems Fundamentals",
+  ],
+  highlights: [
+    "Current CGPA 9.3/10, maintained through the second year",
+    "Coursework spanning AI/ML, data structures, databases and systems fundamentals",
+    "Practical lab work in Python, Java, SQL, shell scripting and Git workflows",
+  ],
+};
+
+export type Internship = {
+  code: string;
+  org: string;
+  role: string;
+  period: string;
+  location: string;
+  state: string;
+  summary: string;
+  bullets: string[];
+  stack: string[];
+  outcome?: string;
+};
+
+export const internships: Internship[] = [
+  {
+    code: "IN-01",
+    org: "SK Natural Farm",
+    role: "API & Backend Developer Intern",
+    period: "July 2026 – August 2026",
+    location: "Bengaluru, India",
+    state: "Completed",
+    summary:
+      "Backend and API internship building and deploying a production web application for a drone-agriculture company.",
+    bullets: [
+      "Built a production Next.js web application with a Node.js/Express backend for a drone-agriculture company.",
+      "Developed responsive interfaces, real-time data visualisation and API integration for a fleet-management dashboard.",
+      "Deployed the application to the cloud and applied monitoring and security practices.",
+    ],
+    stack: ["Next.js", "Node.js", "Express", "REST APIs", "Cloud deployment"],
+    outcome: "Completion certificate · Employee ID SKNF/260701",
+  },
+  {
+    code: "IN-02",
+    org: "1M1B with IBM & AICTE",
+    role: "AI for Sustainability Virtual Intern",
+    period: "July 2026 – September 2026",
+    location: "Virtual",
+    state: "Completed",
+    summary:
+      "Virtual internship on agentic AI and retrieval-augmented generation applied to sustainability problems.",
+    bullets: [
+      "Worked with agentic AI systems and retrieval-augmented generation (RAG).",
+      "Built a machine-learning project aligned with the UN Sustainable Development Goals.",
+      "Completed the programme with AICTE and IBM SkillsBuild certification.",
+    ],
+    stack: ["Agentic AI", "RAG", "Machine Learning"],
+    outcome: "AICTE and IBM SkillsBuild completion certificates",
+  },
+  {
+    code: "IN-03",
+    org: "Kamsale Entertainment",
+    role: "Web Designer & Full-Stack Development Intern",
+    period: "June 2026 – Present",
+    location: "Bengaluru, India",
+    state: "Current",
+    summary:
+      "End-to-end delivery of a company website, including a booking system and Kannada-language support.",
+    bullets: [
+      "Designed and built the company website end to end with React, TypeScript, a Node.js/Express backend and SQLite.",
+      "Implemented a booking system and Kannada multilingual support.",
+    ],
+    stack: ["React", "TypeScript", "Node.js", "Express", "SQLite"],
+  },
+];
+
 export const trajectory = [
   {
     label: "Advanced AI/ML",
@@ -440,12 +532,14 @@ export const trajectory = [
 export const skills = [
   {
     code: "SK-01",
-    group: "Programming & Foundations",
+    group: "Programming & Development",
     items: [
       { name: "Python", level: "Proficient" },
+      { name: "C", level: "Familiar" },
+      { name: "Java", level: "Familiar" },
       { name: "SQL", level: "Proficient" },
-      { name: "Bash", level: "Familiar" },
-      { name: "DSA", level: "Advanced" },
+      { name: "HTML & CSS", level: "Proficient" },
+      { name: "Bash / Shell scripting", level: "Familiar" },
     ],
   },
   {
@@ -455,80 +549,263 @@ export const skills = [
       { name: "Machine Learning", level: "Proficient" },
       { name: "Deep Learning", level: "Proficient" },
       { name: "NLP", level: "Proficient" },
-      { name: "LLMs & RAG", level: "Familiar" },
-      { name: "Agentic AI & Prompt Engineering", level: "Familiar" },
+      { name: "LLMs & RAG", level: "Proficient" },
+      { name: "Agentic AI", level: "Proficient" },
+      { name: "Prompt Engineering", level: "Proficient" },
+      { name: "LangChain", level: "Familiar" },
+      { name: "PyTorch", level: "Familiar" },
     ],
   },
   {
     code: "SK-03",
-    group: "Backend",
+    group: "Backend & APIs",
     items: [
       { name: "FastAPI", level: "Proficient" },
       { name: "REST APIs", level: "Proficient" },
-      { name: "Docker", level: "Proficient" },
-      { name: "Postman", level: "Familiar" },
-      { name: "Git", level: "Proficient" },
+      { name: "Node.js / Express", level: "Proficient" },
+      { name: "API integration", level: "Proficient" },
+      { name: "JSON & HTTP", level: "Proficient" },
+      { name: "WebSockets", level: "Familiar" },
     ],
   },
   {
     code: "SK-04",
-    group: "Platforms",
+    group: "Data & Databases",
     items: [
-      { name: "Hugging Face", level: "Familiar" },
-      { name: "Google AI Studio", level: "Familiar" },
+      { name: "Data Structures & Algorithms", level: "Advanced" },
+      { name: "SQL", level: "Proficient" },
+      { name: "PostgreSQL", level: "Proficient" },
+      { name: "SQLite", level: "Proficient" },
+      { name: "DBMS fundamentals", level: "Proficient" },
+      { name: "Data analysis", level: "Familiar" },
+    ],
+  },
+  {
+    code: "SK-05",
+    group: "Cloud, DevOps & Tools",
+    items: [
+      { name: "Docker", level: "Proficient" },
+      { name: "Git & GitHub", level: "Proficient" },
+      { name: "Vercel", level: "Proficient" },
+      { name: "Ollama", level: "Proficient" },
+      { name: "Render", level: "Familiar" },
+      { name: "Netlify", level: "Familiar" },
       { name: "Google Cloud", level: "Familiar" },
       { name: "AWS", level: "Familiar" },
-      { name: "Ollama", level: "Proficient" },
       { name: "n8n", level: "Familiar" },
-      { name: "Render", level: "Familiar" },
-      { name: "Vercel", level: "Proficient" },
+      { name: "Postman", level: "Familiar" },
+      { name: "Cursor / VS Code", level: "Proficient" },
+    ],
+  },
+  {
+    code: "SK-06",
+    group: "Design & Documentation",
+    items: [
+      { name: "Graphic design", level: "Proficient" },
+      { name: "UI / UX design", level: "Familiar" },
+      { name: "Figma", level: "Familiar" },
+      { name: "Canva", level: "Familiar" },
+      { name: "Technical documentation", level: "Proficient" },
+    ],
+  },
+  {
+    code: "SK-07",
+    group: "Professional",
+    items: [
+      { name: "Team leadership", level: "Proficient" },
+      { name: "Communication", level: "Proficient" },
+      { name: "Pitching & presentation", level: "Proficient" },
+      { name: "Collaborative problem solving", level: "Proficient" },
     ],
   },
 ];
 
 export const achievements = [
-  { title: "SIH Internal Hackathon Winner", detail: "GNSS-denied navigation system", kind: "win" },
-  { title: "GRINOVA Ideathon Winner", detail: "AI ambulance coordination system", kind: "win" },
-  { title: "GRINOVA MVP", detail: "JARVIS AI operating system", kind: "win" },
-  { title: "Full Stack Workshop Runner-Up", detail: "Web development competition", kind: "honour" },
-  { title: "Adobe University Hackathon Ideation", detail: "Ideation round participation", kind: "entry" },
-  { title: "Capgemini Brand Quest Round 1", detail: "Brand challenge competition", kind: "entry" },
-  { title: "FantomCode", detail: "Code competition", kind: "entry" },
-  { title: "Vibe2Ship", detail: "Product ideation", kind: "entry" },
-  { title: "Google Solution Challenge", detail: "Google developer challenge", kind: "entry" },
-  { title: "CometChat Take-Home", detail: "Assignment completion", kind: "entry" },
+  {
+    title: "Smart India Hackathon — Internal Winner",
+    detail: "1st place across Jain University · ISRO-sponsored problem statement · 2026",
+    kind: "win",
+  },
+  {
+    title: "GRINOVA Ideathon Winner",
+    detail: "150+ campus teams · Government of Karnataka · N.E.X.U.S · patent filing in process",
+    kind: "win",
+  },
+  {
+    title: "GRINOVA MVP — JARVIS",
+    detail: "MVP recognition for the personal AI operating system concept",
+    kind: "win",
+  },
+  {
+    title: "Full Stack Development Workshop — 2nd Prize",
+    detail: "FOSS Club, Jain (Deemed-to-be) University · 10-week workshop, 7 Feb – 7 May 2026",
+    kind: "honour",
+  },
+  {
+    title: "Adobe University Hackathon",
+    detail: "Ideation round cleared · participation certificate, August 2026",
+    kind: "entry",
+  },
+  {
+    title: "Capgemini Brand Quest",
+    detail: "Cleared Round 1",
+    kind: "entry",
+  },
+  {
+    title: "FantomCode 2026",
+    detail: "24-hour national hackathon · RV Institute of Technology · 28 March 2026",
+    kind: "entry",
+  },
+  {
+    title: "Vibe2Ship",
+    detail: "Coding Ninjas × Google for Developers · solution submitted",
+    kind: "entry",
+  },
+  {
+    title: "Google Solution Challenge",
+    detail: "Solution and prototype presented in the virtual round",
+    kind: "entry",
+  },
+  {
+    title: "CometChat Agentic Engineer Take-Home",
+    detail: "Real-time chat integration built with Cursor AI",
+    kind: "entry",
+  },
+  {
+    title: "Google Gemini Cloud Facilitator Program",
+    detail: "In progress · Arcade prototyping with Claude, Hugging Face and Google AI Studio",
+    kind: "entry",
+  },
+  {
+    title: "Pitch and Ditch Ideathon",
+    detail: "Idea pitching competition",
+    kind: "entry",
+  },
+  {
+    title: "Rezonix Research Innovation",
+    detail: "Trained a machine-learning model under mentorship",
+    kind: "entry",
+  },
+  {
+    title: "Red Hat AI Seminar",
+    detail: "Attended the campus AI seminar",
+    kind: "entry",
+  },
+  {
+    title: "Chemistry research paper",
+    detail: "Co-authoring · in progress",
+    kind: "entry",
+  },
 ];
 
 export const experience = [
   {
     code: "EX-01",
-    org: "Turing Club",
-    role: "Design Co-Lead",
+    org: "The Turing Club (TTC)",
+    role: "Graphic Designer",
     state: "Current role",
     paragraphs: [
-      "Active leadership position responsible for design contributions, event organisation, creative direction and portfolio evidence.",
-      "Involved in designing club events, managing visual identity and coordinating design workshops for the student community.",
-      "Leading design contributions for technical workshops, hackathons and community-building events.",
+      "Contributing as a graphic designer for a student technical club — event identity, visual assets and promotional material.",
+      "Supporting the design of technical workshops, hackathons and community-building events.",
+      "Formal designation pending confirmation.",
     ],
   },
   {
     code: "EX-02",
+    org: "Cultural Club, FET-JU",
+    role: "Graphic Designer",
+    state: "Campus community",
+    paragraphs: [
+      "Designing posters and visual material for campus cultural events at the Faculty of Engineering and Technology, Jain University.",
+      "Collaborating with event teams on creative direction and delivery timelines.",
+    ],
+  },
+  {
+    code: "EX-03",
     org: "GDG JU-FET",
     role: "Member, Google Developer Groups",
     state: "Campus community",
     paragraphs: [
       "Member of Google Developer Groups at JU-FET (Jain University, Faculty of Engineering and Technology).",
       "Participating in meetups, workshops and hackathons organised by GDG while exploring cloud technologies, AI/ML and developer tools.",
-      "Engaging with the local developer community and attending networking events.",
     ],
   },
 ];
 
-export const certifications = [
-  { code: "CR-01", title: "Oracle Agentic AI Certified Foundations Associate", issuer: "Oracle", year: "2024" },
-  { code: "CR-02", title: "ISRO AI/ML for Geodata Analysis", issuer: "ISRO", year: "2024" },
-  { code: "CR-03", title: "Google Cloud Arcade Skill Badges", issuer: "Google Cloud", year: "2024" },
-  { code: "CR-04", title: "Full Stack Workshop Runner-Up", issuer: "Workshop Participation", year: "2024" },
+export type Certification = {
+  code: string;
+  title: string;
+  issuer: string;
+  date: string;
+  status: "completed" | "pending";
+  note?: string;
+};
+
+export const certifications: Certification[] = [
+  {
+    code: "CR-01",
+    title: "Agentic AI Certified Foundations Associate",
+    issuer: "Oracle University",
+    date: "23 August 2026",
+    status: "completed",
+    note: "Credential ID 330876841AAI26OFA · exam 1Z0-1157-26 passed",
+  },
+  {
+    code: "CR-02",
+    title: "AI/ML for Geodata Analysis",
+    issuer: "ISRO — Indian Institute of Remote Sensing (IIRS)",
+    date: "Date not stated",
+    status: "pending",
+    note: "Exam completed with a 100% score · certificate pending issue",
+  },
+  {
+    code: "CR-03",
+    title: "Google Cloud Arcade — Skill Badges",
+    issuer: "Google Cloud",
+    date: "Date not stated",
+    status: "completed",
+    note: "14 skill badges completed",
+  },
+  {
+    code: "CR-04",
+    title: "Make Agentic AI Work for You",
+    issuer: "IBM SkillsBuild",
+    date: "24 August 2026",
+    status: "completed",
+    note: "Completion certificate PLAN-37BFD561DC25",
+  },
+  {
+    code: "CR-05",
+    title: "Introduction to Retrieval-Augmented Generation",
+    issuer: "IBM SkillsBuild",
+    date: "Date not stated",
+    status: "completed",
+    note: "Digital badge",
+  },
+  {
+    code: "CR-06",
+    title: "The Rise of Multiagent Systems",
+    issuer: "IBM SkillsBuild",
+    date: "Date not stated",
+    status: "completed",
+    note: "Digital badge",
+  },
+  {
+    code: "CR-07",
+    title: "Unleashing the Power of AI Agents",
+    issuer: "IBM SkillsBuild",
+    date: "Date not stated",
+    status: "completed",
+    note: "Digital badge",
+  },
+  {
+    code: "CR-08",
+    title: "AI for Sustainability Virtual Internship",
+    issuer: "1M1B with IBM & AICTE",
+    date: "2026",
+    status: "completed",
+    note: "Programme completion certificate",
+  },
 ];
 
 export const interests = [

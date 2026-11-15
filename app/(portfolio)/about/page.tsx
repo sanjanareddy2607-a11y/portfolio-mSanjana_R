@@ -1,18 +1,19 @@
 import Link from "next/link";
 import { Planet } from "@/components/Planet";
 import { ArrowIcon, Dot, ExternalIcon, PageShell } from "@/components/ui";
-import { aboutValues, site } from "@/lib/content";
+import { aboutValues, education, site } from "@/lib/content";
 
 const record = [
   { label: "Callsign", value: site.name },
   { label: "Discipline", value: "AI & Machine Learning" },
   { label: "Program", value: "B.Tech CSE — AI & ML" },
-  { label: "Cohort", value: "Second Year, 2024–2028" },
+  { label: "Cohort", value: "Second year" },
   { label: "Base", value: "Bengaluru, India" },
   { label: "Status", value: "Open to AI/ML opportunities" },
 ];
 
 const indexLinks = [
+  { href: "/about#education", label: "Education & CGPA" },
   { href: "/technical-skills", label: "Technical skills" },
   { href: "/experience-leadership", label: "Experience & leadership" },
   { href: "/achievements", label: "Achievements" },
@@ -108,6 +109,57 @@ export default function About() {
                 </ul>
               </div>
             </div>
+          </section>
+
+          <section
+            id="education"
+            className="panel brackets brackets-accent relative scroll-mt-24 p-6 md:p-7"
+          >
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <span className="label text-accent">Education &amp; academics</span>
+              <span className="label-xs text-faint">Record 02</span>
+            </div>
+
+            <div className="mt-5 grid gap-6 sm:grid-cols-[auto_1fr] sm:items-center">
+              <div className="border-l-2 border-accent pl-4">
+                <p className="display text-[clamp(2.6rem,6vw,3.6rem)] leading-none text-accent">
+                  {education.cgpa}
+                  <span className="text-[1.1rem] text-faint">{education.cgpaScale}</span>
+                </p>
+                <p className="label-xs mt-2 text-faint">Current CGPA</p>
+              </div>
+              <div>
+                <h2 className="text-[15px] font-medium text-ink">{education.degree}</h2>
+                <p className="mt-1 text-[13.5px] text-mist">{education.specialization}</p>
+                <p className="mt-1 text-[13px] text-faint">{education.institution}</p>
+                <p className="label-xs mt-3 text-accent">
+                  {education.status} · {education.graduation}
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-6 border-t border-line/70 pt-5">
+              <h3 className="label text-accent">Coursework</h3>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {education.coursework.map((course) => (
+                  <span key={course} className="label-xs border border-line px-2 py-1 text-mist">
+                    {course}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <ul className="mt-5 space-y-2 border-t border-line/70 pt-4">
+              {education.highlights.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-3 text-[13px] leading-relaxed text-mist"
+                >
+                  <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-accent/60" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </section>
 
           <section>
